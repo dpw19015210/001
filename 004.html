@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	
+		<link rel="stylesheet" type="text/css" href="1/CSS/bootstrap-theme.css" />
+		<link rel="stylesheet" type="text/css" href="1/CSS/bootstrap.css" />
+		<script type="text/javascript" src="1/js/jquery.js"></script> 
+		<script src="1/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+<title>Fortune telling</title>
+		<style type="text/css">
+			* {
+							margin: 0;
+							padding: 0;
+							font-family: sans-serif;
+						}
+			body{
+			
+				background: url(img/7.png) no-repeat;
+				background-size: cover;
+			}
+			h4{
+			margin-top: 10px;
+			}
+						.O {
+			
+			    
+							display: flex;
+							margin-top: 40px;
+							margin-left: 60px;
+							flex-wrap: wrap
+						}
+						#D{
+							margin-top: 20px;
+							margin-left: 430px;
+						}
+			        #J{
+			              
+							margin-left: -50px;
+							
+								 background: rgb(0,0,0,0.4);
+								 width: 200px;
+								 height: 100px;
+								 padding: 20px;
+								
+				                 text-align: center;
+								
+						border: 3px solid white;
+						
+								 color: white;
+							
+						}
+						
+						#one {  
+						    width: 20px;  
+						    margin: 0 auto;  
+						    line-height: 24px;  
+						    font-size: 20px;
+							color: white
+						}
+						
+
+						h4{
+							top: 200px;
+							font-size: 20px;
+							letter-spacing: 3px;
+							
+						}
+						p{
+							text-align: justify;
+						}
+						.W {
+							width: 200px;
+							height: 300px;
+							border: 3px solid white;
+							margin-left: -50px;
+			
+						}
+			
+						#E {
+							margin-top: 50px;
+							margin-right: 480px;
+							width: 100px;
+							height: 50px;
+						}
+						
+			
+						
+						.turn{
+						 
+						   
+						  animation:turn 0.4s linear infinite;   /*速度控制*/
+						 animation-iteration-count:10;
+						}
+						/* 
+						  turn : 定义的动画名称
+						  1s : 动画时间
+						  linear : 动画以何种运行轨迹完成一个周期
+						  infinite :规定动画应该无限次播放
+						 */
+						@keyframes turn{
+						  0%{-webkit-transform:rotateY(0deg);}
+						  25%{-webkit-transform:rotateY(90deg);}
+						  50%{-webkit-transform:rotateY(180deg);}
+						  75%{-webkit-transform:rotateY(270deg);}
+						  100%{-webkit-transform:rotateY(360deg);
+						  }
+			
+		</style>
+
+
+		
+	</head>
+	<body>
+		<div class="O">
+			
+			</div>
+			<div class="O">
+				
+			
+			<div id="one">
+			下拉查看答案🡳
+			</div>
+			<div id="two">
+				<div class="W" id="0041">
+
+				</div>
+				<button type="button" class="btn btn-default "id="E" onclick="adimg()">开始答题</button>
+			</div>
+
+
+
+				
+			</div>
+
+		<div id="D">
+	
+		</div>
+
+	</body>
+	<script>
+	
+		function adimg() {
+			var a = "<img src='img/炉石传说.png' style='width: 200px;height: 300px;'>";
+			var b = document.getElementById("0041");
+				b.innerHTML = a;
+		
+			   $("img").addClass("turn");
+			      var ll = setTimeout(function(){rty()},2000);
+		}
+		function rty()
+		
+		{	
+			/*改变图片*/
+			var a= "  <img src='img/T/00.jpg'style='width: 250px;height: 400px;'>";
+			var b = document.getElementById("0041");
+			var x = Math.floor(Math.random() * 50);
+			
+			var m ;
+	
+			var n=document.getElementById("D")
+			switch (x) {
+				case 0:
+						a="<img src='扑克牌/扑克1.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>B</div>";
+				     b.innerHTML = a;
+			break;	
+			
+			case 1:
+						a="<img src='扑克牌/扑克2.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;	
+			
+			case 2:
+						a="<img src='扑克牌/扑克3.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;	
+			
+			case 3:
+						a="<img src='扑克牌/扑克4.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;	
+			
+			case 4:
+						a="<img src='扑克牌/扑克5.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;	
+			
+			case 5:
+						a="<img src='扑克牌/扑克6.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;	
+			
+			case 6:
+						a="<img src='扑克牌/扑克7.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;	
+			
+			case 7:
+						a="<img src='扑克牌/扑克8.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;	
+			
+			case 8:
+						a="<img src='扑克牌/扑克9.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;	
+			
+			case 9:
+						a="<img src='扑克牌/扑克10.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 10:
+						a="<img src='扑克牌/扑克11.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 11:
+						a="<img src='扑克牌/扑克12.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 12:
+						a="<img src='扑克牌/扑克13.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>B</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 13:
+						a="<img src='扑克牌/扑克14.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 14:
+						a="<img src='扑克牌/扑克15.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 15:
+						a="<img src='扑克牌/扑克16.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 16:
+						a="<img src='扑克牌/扑克17.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 17:
+						a="<img src='扑克牌/扑克18.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 18:
+						a="<img src='扑克牌/扑克19.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 19:
+						a="<img src='扑克牌/扑克20.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 20:
+						a="<img src='扑克牌/扑克21.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 21:
+						a="<img src='扑克牌/扑克22.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 22:
+						a="<img src='扑克牌/扑克23.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 23:
+						a="<img src='扑克牌/扑克24.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 24:
+						a="<img src='扑克牌/扑克25.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>B</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 25:
+						a="<img src='扑克牌/扑克26.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 26:
+						a="<img src='扑克牌/扑克27.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 27:
+						a="<img src='扑克牌/扑克28.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 28:
+						a="<img src='扑克牌/扑克29.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 29:
+						a="<img src='扑克牌/扑克30.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 30:
+						a="<img src='扑克牌/扑克31.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 31:
+						a="<img src='扑克牌/扑克32.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 32:
+						a="<img src='扑克牌/扑克33.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>B</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 33:
+						a="<img src='扑克牌/扑克34.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 34:
+						a="<img src='扑克牌/扑克35.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>A</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 35:
+						a="<img src='扑克牌/扑克36.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 36:
+						a="<img src='扑克牌/扑克37.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 37:
+						a="<img src='扑克牌/扑克38.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>C</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 38:
+						a="<img src='扑克牌/扑克39.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>B</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 39:
+						a="<img src='扑克牌/扑克40.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 40:
+						a="<img src='扑克牌/扑克41.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 41:
+						a="<img src='扑克牌/扑克41.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 42:
+						a="<img src='扑克牌/扑克42.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 43:
+						a="<img src='扑克牌/扑克44.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 44:
+						a="<img src='扑克牌/扑克45.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 45:
+						a="<img src='扑克牌/扑克46.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 46:
+						a="<img src='扑克牌/扑克47.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 47:
+						a="<img src='扑克牌/扑克48.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 48:
+						a="<img src='扑克牌/扑克49.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			case 49:
+						a="<img src='扑克牌/扑克50.jpg'style='width: 200px;height: 300px;' >";
+					  m="<div id='J' ><h4>正确答案:</h4>D</div>";
+				     b.innerHTML = a;
+			break;
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+							
+
+
+					
+			}
+			n.innerHTML=m;
+		    clearTimeout()
+		}
+	</script>
+</html>
